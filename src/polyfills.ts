@@ -18,3 +18,6 @@ import 'core-js/es6/reflect';
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
+// Pacote intl é usado necessario qdo utilizamos internacionalização, como o formato de moedas
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR.js';
