@@ -9,7 +9,6 @@ import {ErrorHandler} from '../app.error-handler';
 import {MenuItem} from '../restaurant-detail/menu-item/menu-item.model';
 
 @Injectable()
-
 export class RestaurantsService {
 
   constructor(private http: Http) { }
