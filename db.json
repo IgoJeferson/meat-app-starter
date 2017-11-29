@@ -370,5 +370,32 @@
       "restaurantId": "tasty-treats"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "address": "testes",
+      "number": 1,
+      "optionalAddress": "123",
+      "paymentOption": "MON",
+      "items": [
+        {
+          "quantity": 2,
+          "menuId": "cup-cake"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "address": "Rua dos tapes",
+      "number": 193,
+      "optionalAddress": "Apt 232",
+      "paymentOption": "MON",
+      "items": [
+        {
+          "quantity": 3,
+          "menuId": "sunday"
+        }
+      ],
+      "id": 2
+    }
+  ]
 }
