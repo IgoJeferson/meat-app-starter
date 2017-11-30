@@ -14,6 +14,12 @@
 
 `ng serve` ou `npm start`
 
+### Build
+
+`ng build --prod --bh=/meat/`
+
+Jogar o contéudo da pasta dist dentro de uma pasta chamada meat, no apache http server
+
 ## 2. Iniciando o Backend
 
 ### Instalando o json-server
