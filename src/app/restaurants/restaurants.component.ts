@@ -62,7 +62,6 @@ export class RestaurantsComponent implements OnInit {
   }
 
   search() {
-    // this.searchBarState == 'hidden' ? 'visible' : 'hidden';
     this.searchBarState = this.searchBarState === 'hidden' ? 'visible' : 'hidden';
   }
 
