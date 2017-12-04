@@ -460,6 +460,30 @@
         }
       ],
       "id": 5
+    },
+    {
+      "name": "Igo Jeferson Barros Coelho",
+      "email": "igor.jeferson17@gmail.com",
+      "emailConfirmation": "igor.jeferson17@gmail.com",
+      "address": "Rua Tenente Azevedo, ",
+      "number": 104,
+      "optionalAddress": "Aclimação",
+      "paymentOption": "DEB",
+      "items": [
+        {
+          "quantity": 1,
+          "menuId": "cup-cake"
+        },
+        {
+          "quantity": 4,
+          "menuId": "donut"
+        },
+        {
+          "quantity": 1,
+          "menuId": "bread"
+        }
+      ],
+      "id": 6
     }
   ]
 }

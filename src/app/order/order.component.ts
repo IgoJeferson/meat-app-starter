@@ -5,6 +5,7 @@ import {OrderService} from './order.service';
 import {Order, OrderItem} from './order.model';
 import {Router} from '@angular/router';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import 'rxjs/add/operator/do'
 
 @Component({
   selector: 'mt-order',
@@ -18,7 +19,9 @@ export class OrderComponent implements OnInit {
 
   orderForm: FormGroup;
 
-  delivery: number = 8;
+  delivery: Number = 8;
+
+  orderId: string;
 
   paymentsOptions: RadioOption[] = [
     {label: 'Dinheiro', value: 'MON'},
@@ -77,13 +80,20 @@ export class OrderComponent implements OnInit {
   }
 
   checkOrder(order: Order) {
-    order.items = this.cartItems().map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id));
+    order.items = this.cartItems()
+            .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id));
+
     this.orderService.checkOrder(order)
+      .do( (orderId: string) => {
+        this.orderId = orderId })
       .subscribe( (orderId: Order) => {
         this.router.navigate(['/order-summary'])
         console.log(`Compra concluída:  ${orderId}`);
         this.orderService.clear();
       });
-    console.log(order);
+  }
+
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined;
   }
 }
